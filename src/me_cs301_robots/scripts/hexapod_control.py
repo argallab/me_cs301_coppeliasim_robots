@@ -36,7 +36,7 @@ class HexapodControl(RobotControl):
 
         #main control loop
         while not rospy.is_shutdown(): 
-            self.hold_neutral() #remove if not necessary
+            # self.hold_neutral() #remove if not necessary
             # ---- add your code for a particular behavior here ----- #
 
             time.sleep(0.1) # change the sleep time to whatever is the appropriate control rate for simulation

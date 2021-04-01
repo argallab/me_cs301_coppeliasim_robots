@@ -36,11 +36,12 @@ class RWControl(RobotControl):
 
         #main control loop
         while not rospy.is_shutdown():
-            self.hold_neutral() #remove if not necessary
+            # self.hold_neutral() #remove if not necessary
             # ---- add your code for a particular behavior here ----- #
             time.sleep(0.1) # change the sleep time to whatever is the appropriate control rate for simulation
             
     def hold_neutral(self):
+        # --- simple example of a behavior ---- #
         self.setMotorTargetJointPosition('leg1_j1', 0.0)
         self.setMotorTargetJointPosition('leg1_j2', 0.0)
         self.setMotorTargetJointPosition('leg1_j3', self.degToRad(90.0)) #note that the API also provides a helper function to convert degrees to Radians
