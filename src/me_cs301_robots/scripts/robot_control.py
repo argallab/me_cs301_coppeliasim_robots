@@ -138,8 +138,6 @@ class RobotControl(object):
         rospy.Subscriber('/simTime', Float32, self.simTime_cb)
         rospy.Subscriber('/tf', TFMessage, self.tf_cb)
 
-        # still need to add this in the LUA script
-
         rospy.Subscriber('/frontSensorDistance', Range, self.distance_front_cb)
         rospy.Subscriber('/leftSensorDistance',  Range, self.distance_left_cb)
         rospy.Subscriber('/rightSensorDistance', Range, self.distance_right_cb)
