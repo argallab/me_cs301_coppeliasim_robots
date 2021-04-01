@@ -20,7 +20,7 @@ class RobotControl(object):
         if self.robot_type == 'hexapod':
             rospy.init_node('hexapod_control', anonymous=True)
         elif self.robot_type == 'rollerwalker':
-            rospy.init_node('rw_control', anonymous=True)
+            rospy.init_node('roller_walker_control', anonymous=True)
             
         print('INIT NODE')
         
@@ -147,7 +147,7 @@ class RobotControl(object):
         if self.robot_type == 'hexapod':
             rospy.Subscriber('/hexapod/joint_states', JointState, self.joint_states_cb)
         elif self.robot_type == 'rollerwalker':
-            rospy.Subscriber('/rw/joint_states', JointState, self.joint_states_cb)
+            rospy.Subscriber('/rollerwalker/joint_states', JointState, self.joint_states_cb)
     
     # subscriber callbacks
     def simTime_cb(self, msg):
